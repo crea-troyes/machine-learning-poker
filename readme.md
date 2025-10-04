@@ -34,7 +34,6 @@ ai-poker-decision/
 1.  Cloner le dépôt :
     ```bash
     git clone https://github.com/crea-troyes/machine-learning-poker.git
-    cd ai-poker-decision
     ```
 2.  Installer la dépendance ML (php-ai/php-ml) :
     ```bash
