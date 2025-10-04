@@ -3,7 +3,7 @@
 AI Poker Decision est une démonstration d’apprentissage automatique appliquée au poker, écrite en PHP.
 Le projet illustre comment collecter des données de mains, réentraîner un modèle K-Nearest Neighbors (KNN) et fournir une prédiction de décision (call / fold / raise) via une interface web simple.
 
-## 🚀 Fonctions principales
+## Fonctions principales
 
 - Enregistrement local des décisions et des paramètres de la main.
 - Réentraînement automatique du modèle après ajout de nouvelles données.
@@ -12,7 +12,7 @@ Le projet illustre comment collecter des données de mains, réentraîner un mod
 - Visualisation : fréquence des décisions et rentabilité par décision (Chart.js).
 - Interface stylisée (thème sombre) avec compatibilité Safari pour les `<select>`.
 
-## 📁 Structure du projet
+## Structure du projet
 
 ```
 ai-poker-decision/
@@ -22,18 +22,18 @@ ai-poker-decision/
 └── vendor/              # Dépendances Composer (php-ai/php-ml)
 ```
 
-## ⚙️ Prérequis
+## Prérequis
 
 - PHP 8+ (ou 7.4+ selon votre environnement)
 - Composer
 - Navigateur moderne (Chrome, Firefox, Safari)
 - (Optionnel) serveur local PHP pour tester : `php -S`
 
-## 🔧 Installation rapide
+## Installation rapide
 
 1.  Cloner le dépôt :
     ```bash
-    git clone https://github.com/votre-utilisateur/ai-poker-decision.git
+    git clone https://github.com/crea-troyes/machine-learning-poker.git
     cd ai-poker-decision
     ```
 2.  Installer la dépendance ML (php-ai/php-ml) :
@@ -47,7 +47,7 @@ ai-poker-decision/
 4.  Ouvrez dans votre navigateur :
     `http://localhost:8000/poker_ml.php`
 
-## 🧭 Utilisation
+## Utilisation
 
 Remplissez le formulaire avec :
 - `main` : force de la main (ex. 0.00 → 1.00)
@@ -63,7 +63,7 @@ Remplissez le formulaire avec :
 Cliquez **Prédire** pour obtenir la décision suggérée par le modèle (si suffisamment de données).
 Cliquez **Enregistrer** pour stocker la donnée et lancer un réentraînement (si ≥ 20 entrées).
 
-## 🧠 Détails Machine Learning
+## Détails Machine Learning
 
 - **Algorithme** : K-Nearest Neighbors (KNN) via `php-ai/php-ml`.
 - **Features (entrée)** :
@@ -79,7 +79,7 @@ Cliquez **Enregistrer** pour stocker la donnée et lancer un réentraînement (s
 - **Métrique** : Accuracy (pourcentage)
 - **Limitation** : fichier data limité à 500 entrées (les plus anciennes sont supprimées)
 
-## 📄 Format du fichier poker_data.json
+## Format du fichier poker_data.json
 
 Chaque entrée est un objet JSON avec la structure suivante :
 
@@ -97,14 +97,14 @@ Chaque entrée est un objet JSON avec la structure suivante :
 }
 ```
 
-## 📊 Visualisations
+## Visualisations
 
 - `chart1` : histogramme de la fréquence des décisions.
 - `chart2` : histogramme de la rentabilité totale par décision (somme des `resultat` par décision).
 
 Les graphiques sont créés avec Chart.js côté client (JavaScript).
 
-## 🔒 Sécurité & bonnes pratiques
+## Sécurité & bonnes pratiques
 
 - Les données sont locales (JSON) : attention aux partages non souhaités.
 - Limitez l’accès au fichier si vous hébergez en production.
@@ -113,13 +113,13 @@ Les graphiques sont créés avec Chart.js côté client (JavaScript).
   - authentification / profils utilisateur,
   - entraînement sur serveur hors requête utilisateur (batch).
 
-## ✅ Tests et validation
+## Tests et validation
 
 - Vérifiez que Composer installe correctement `php-ai/php-ml`.
 - Assurez-vous que le fichier `poker_data.json` est accessible en lecture/écriture par PHP.
 - Si le modèle ne prédit pas, vérifiez le nombre d’entrées (≥ 10 pour prédiction, ≥ 20 pour évaluer l'accuracy).
 
-## ♻️ Améliorations proposées
+## Améliorations proposées
 
 - Ajouter un système d’utilisateur pour modèles personnalisés.
 - Déplacer l’entraînement en tâche planifiée (cron) plutôt que synchronisée.
@@ -127,7 +127,7 @@ Les graphiques sont créés avec Chart.js côté client (JavaScript).
 - Normaliser / standardiser les features (scaling).
 - Ajouter des tests unitaires et des fixtures de données.
 
-## 🤝 Contribution
+## Contribution
 
 Vous pouvez contribuer via pull requests ou issues. Merci d’inclure :
 - Une description claire du changement.
@@ -137,16 +137,12 @@ Vous pouvez contribuer via pull requests ou issues. Merci d’inclure :
 ## 📞 Auteur & contact
 
 - **Alban — Créa-Troyes**
-- **Site** : https://crea-troyes.fr
-- **Projet annexe** : https://code.crea-troyes.fr
-- **Entreprise** : https://affnox.fr
+- **Site** : https://blog.crea-troyes.fr
+- **Entreprise** : [https://affnox.fr](https://crea-troyes.fr)
 
 ## 🪪 Licence
 
 Ce projet est distribué sous Licence MIT — voir le fichier `LICENSE` pour les détails.
 
 ## 📸 Capture d’écran
-
-Ajoutez ici une capture d’écran de l’interface une fois le projet lancé :
-
-!AI Poker Decision - Interface
+![Interface AI Poker Decision](https://blog.crea-troyes.fr/wp-content/uploads/2025/10/poker.jpg)
